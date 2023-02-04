@@ -32,6 +32,7 @@ Song *createSong(char *title, char *artist, unsigned int year) {
     If the titles are the same: return -1 if artist of songOne precedes artist of songTwo, 1 if songOne follows songTwo
     If the artists are the same: return -1, 0, or 1 based on year values
 */
+// had to change parameters for qsort to work
 int compareSongs(const void *ptr1, const void *ptr2) {
     const Song *songOne = ptr1;
     const Song *songTwo = ptr2;
